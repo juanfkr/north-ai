@@ -1,9 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {NLayoutFooter, NButton} from 'naive-ui';
+
+function toGit(): void {
+    window.open("https://github.com/juanfkr/north-ai");
+}
+</script>
 
 <template>
-    <footer>
-        <p>conheça o projeto</p>
-    </footer>
+    <n-layout-footer align="center">
+        <n-button @click="toGit" text>
+          <span class="github">Conheça o projeto</span>
+        </n-button>
+    </n-layout-footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+.n-layout-footer {
+  padding: 24px;
+}
+
+span {
+    font-size:  16px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+</style>

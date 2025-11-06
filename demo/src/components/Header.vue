@@ -1,9 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {NLayoutHeader} from 'naive-ui';
+</script>
 
 <template>
-    <header>
-        <p>north.ai</p>
-    </header>
+    <n-layout-header align="center">
+        <h1>north.ai</h1>
+    </n-layout-header>
 </template>
 
-<style scoped></style>
+<style scoped>
+.n-layout-header {
+    padding: 16px;
+    user-select: none;
+}
+</style>
