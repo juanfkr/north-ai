@@ -1,11 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+import DiscoverSection from '@/components/ui/DiscoverSection.vue';
+import SugestionForm from '@/components/ui/SugestionForm.vue';
+import { NLayout, NFlex } from 'naive-ui';
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <n-layout>
+    <n-flex vertical justify="space-between">
+      <Header />
+
+      <n-layout has-sider>
+        <DiscoverSection />
+        <SugestionForm />
+      </n-layout>
+
+      <Footer/>
+    </n-flex>
+  </n-layout>
 </template>
 
 <style scoped></style>
